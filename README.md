@@ -98,9 +98,8 @@ Always run:
 
 ``` main.py``` 
 
-or execute the scripts in order.
 
-Regression Models
+#	Regression Models
 Model	Predictor → Target	Equation	R²	RMSE
 M1	Advertising Cost → Sales	Sales = 5.93 × AdCost − 324.38	0.564	507.5
 M2	Sales → Profit	Profit = 0.258 × Sales − 27.44	—	295.0
@@ -108,7 +107,10 @@ M3	Discount → Profit	Profit = −241.97 × Discount + 68.63	0.064	213.1
 M4	Quantity → Profit	Profit = 7.09 × Quantity + 3.98	0.002	219.9
 M5	Visits → Spending	Spending = 28.06 × Visits − 247.63	0.255	635.6
 M6	Discount → Sales	Sales = −126.75 × Discount + 245.51	≈0	769.9
-Predictive Scenarios
+
+---
+
+#	Predictive Scenarios
 Scenario	Input	Predicted Output
 Advertising Budget	$300/month	$1,455 in sales
 Sales Transaction	$500 sale	$101.39 profit
@@ -117,7 +119,6 @@ Discount Level	> 28.4%	Net loss (break-even threshold)
 
 ---
 
-Business Strategies
 #	Strategy	Statistical Basis
 1	Maintain ≥ $300/month advertising	Model M1 shows 5.93× revenue return
 2	Avoid transactions below $107	Model M2 shows average loss below this level
@@ -127,7 +128,7 @@ Business Strategies
 
 --- 
 
-Technology Stack
+#	Technology Stack
 
 Python 3.10
 pandas
