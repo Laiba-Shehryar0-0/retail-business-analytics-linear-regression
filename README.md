@@ -1,28 +1,32 @@
-Retail Business Analytics — Data Science Pipeline
+# Retail Business Analytics — Data Science Pipeline
 
-A complete data science pipeline applied to the Superstore retail dataset, covering:
+A complete **data science pipeline** applied to the **Superstore retail dataset**, covering:
 
-Statistical Exploratory Data Analysis (EDA)
+- Statistical **Exploratory Data Analysis (EDA)**
+- **Correlation analysis**
+- **OLS regression modeling**
+- **Predictive scenario simulation**
+- **Data-driven business strategy recommendations**
 
-Correlation analysis
+The project analyzes **9,994 retail transactions** using **8 numerical variables** to uncover actionable business insights.
 
-OLS regression modeling
+---
 
-Predictive scenario simulation
+## Key Results
 
-Data-driven business strategy recommendations
+| Relationship | r | R² | Business Finding |
+|---|---|---|---|
+| Advertising Cost → Sales | 0.775 | 0.564 | $1 ad spend generates **$5.93 in sales** |
+| Sales → Profit | 0.479 | — | **$0.258 profit per $1 revenue** |
+| Discount → Profit | -0.220 | 0.064 | **Break-even at 28.4% discount** |
+| Customer Visits → Spending | 0.520 | 0.255 | Each visit adds **$28.06 spending** |
+| Quantity → Profit | 0.066 | 0.002 | Volume alone **does not drive profit** |
+| Discount → Sales | -0.028 | ≈0 | Discounting **does not increase volume** |
 
-The project analyzes 9,994 retail transactions using 8 numerical variables to uncover actionable business insights.
+---
 
-Key Results
-Relationship	r	R²	Business Finding
-Advertising Cost → Sales	0.775	0.564	$1 ad spend generates $5.93 in sales
-Sales → Profit	0.479	—	$0.258 profit per $1 revenue
-Discount → Profit	-0.220	0.064	Break-even at 28.4% discount
-Customer Visits → Spending	0.520	0.255	Each visit adds $28.06 spending
-Quantity → Profit	0.066	0.002	Volume alone does not drive profit
-Discount → Sales	-0.028	≈0	Discounting does not increase volume
-Project Structure
+## Project Structure
+
 retail-business-analytics/
 │
 ├── main.py                        # Master runner — executes all steps in sequence
@@ -45,44 +49,46 @@ retail-business-analytics/
     ├── fig9_residual_histograms.png
     ├── fig10_predictions.png
     └── fig11_business_strategy_dashboard.png
-Dataset
 
-Base Dataset
+---
+
+## Dataset
+
+**Base Dataset**
 
 Superstore Sales Dataset (Kaggle)
 
-9,994 records
+- **9,994 records**
+- **21 original columns**
+- Time range: **2014–2017**
 
-21 original columns
-
-Time range: 2014–2017
-
-Engineered Features
+### Engineered Features
 
 Four synthetic variables were generated to simulate realistic business drivers.
 
-Column	Correlated With	r
-Advertising_Cost	Sales (category-weighted)	0.775
-Store_Area	Sales (region-stratified)	0.488
-Customer_Visits	Quantity (segment-stratified)	0.787
-Customer_Spending	Sales (visit-adjusted)	0.988
+| Column | Correlated With | r |
+|---|---|---|
+| Advertising_Cost | Sales (category-weighted) | 0.775 |
+| Store_Area | Sales (region-stratified) | 0.488 |
+| Customer_Visits | Quantity (segment-stratified) | 0.787 |
+| Customer_Spending | Sales (visit-adjusted) | 0.988 |
 
-Synthetic variables were generated using business-logical relationships with Gaussian noise to maintain realistic statistical distributions.
+Synthetic variables were generated using **business-logical relationships with Gaussian noise** to maintain realistic statistical distributions.
 
-Installation
+---
+
+## Installation
 
 Install required dependencies:
 
+```bash
 pip install pandas numpy matplotlib seaborn scikit-learn
-Usage
-
 Run the full pipeline:
-
-python main.py
+```bash
+python main.py 
 
 All 11 figures will automatically save in the outputs/ directory.
 
-Run Individual Steps
 python step1_eda_statistics.py
 python step2_scatter_correlation.py
 python step3_regression_models.py
@@ -117,16 +123,12 @@ Business Strategies
 3	Cap discounts at 20%	Break-even occurs at 28.4% discount
 4	Increase customer visit frequency	Each visit adds $28.06 spending
 5	Bundle products instead of discounting	Quantity explains only 0.2% of profit
+
 Technology Stack
 
 Python 3.10
-
 pandas
-
 numpy
-
 scikit-learn
-
 matplotlib
-
 seaborn
