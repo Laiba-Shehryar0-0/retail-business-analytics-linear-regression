@@ -80,12 +80,10 @@ Synthetic variables were generated using **business-logical relationships with G
 ## Installation
 
 Install required dependencies:
+```bash pip install pandas numpy matplotlib seaborn scikit-learn```
 
-```bash
-pip install pandas numpy matplotlib seaborn scikit-learn
 Run the full pipeline:
-```bash
-python main.py 
+```python main.py``` 
 
 All 11 figures will automatically save in the outputs/ directory.
 
@@ -98,7 +96,7 @@ python step4_predictions_strategy.py
 
 Always run:
 
-main.py
+``` main.py``` 
 
 or execute the scripts in order.
 
@@ -116,6 +114,9 @@ Advertising Budget	$300/month	$1,455 in sales
 Sales Transaction	$500 sale	$101.39 profit
 Customer Visits	30 visits	$594 spending
 Discount Level	> 28.4%	Net loss (break-even threshold)
+
+---
+
 Business Strategies
 #	Strategy	Statistical Basis
 1	Maintain ≥ $300/month advertising	Model M1 shows 5.93× revenue return
@@ -123,6 +124,8 @@ Business Strategies
 3	Cap discounts at 20%	Break-even occurs at 28.4% discount
 4	Increase customer visit frequency	Each visit adds $28.06 spending
 5	Bundle products instead of discounting	Quantity explains only 0.2% of profit
+
+--- 
 
 Technology Stack
 
