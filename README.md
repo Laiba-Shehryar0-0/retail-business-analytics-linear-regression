@@ -29,26 +29,38 @@ The project analyzes **9,994 retail transactions** using **8 numerical variables
 
 retail-business-analytics/
 │
-├── main.py                        # Master runner — executes all steps in sequence
-├── step1_eda_statistics.py        # Descriptive statistics + IQR outlier detection
-├── step2_scatter_correlation.py   # Scatter plots + Pearson correlation heatmap
-├── step3_regression_models.py     # OLS model building + residual diagnostics
-├── step4_predictions_strategy.py  # Prediction scenarios + business strategies
+├── main.py
+│ Master runner — executes all pipeline steps in sequence
 │
-├── Sample_Superstore.csv          # Dataset — 9,994 rows, 25 columns
+├── step1_eda_statistics.py
+│ Performs descriptive statistics and IQR-based outlier detection
 │
-└── outputs/                       # Auto-generated results
-    ├── fig1_distributions_boxplots.png
-    ├── fig2_scatter_plots.png
-    ├── fig3_correlation.png
-    ├── fig4_pairplot.png
-    ├── fig5_all_models.png
-    ├── fig6_model1_adcost_sales.png
-    ├── fig7_model2_sales_profit.png
-    ├── fig8_model5_visits_spending.png
-    ├── fig9_residual_histograms.png
-    ├── fig10_predictions.png
-    └── fig11_business_strategy_dashboard.png
+├── step2_scatter_correlation.py
+│ Generates scatter plots and Pearson correlation heatmap
+│
+├── step3_regression_models.py
+│ Builds OLS regression models and performs residual diagnostics
+│
+├── step4_predictions_strategy.py
+│ Runs prediction scenarios and derives business strategies
+│
+├── Sample_Superstore.csv
+│ Superstore dataset — 9,994 rows and 25 columns
+│
+└── outputs/
+Auto-generated visualizations and analysis results
+│
+├── fig1_distributions_boxplots.png
+├── fig2_scatter_plots.png
+├── fig3_correlation.png
+├── fig4_pairplot.png
+├── fig5_all_models.png
+├── fig6_model1_adcost_sales.png
+├── fig7_model2_sales_profit.png
+├── fig8_model5_visits_spending.png
+├── fig9_residual_histograms.png
+├── fig10_predictions.png
+└── fig11_business_strategy_dashboard.png
 
 ---
 
@@ -87,16 +99,7 @@ Run the full pipeline:
 
 All 11 figures will automatically save in the outputs/ directory.
 
-python step1_eda_statistics.py
-python step2_scatter_correlation.py
-python step3_regression_models.py
-python step4_predictions_strategy.py
-
-⚠️ step4_predictions_strategy.py requires outputs/models.pkl generated in step3.
-
-Always run:
-
-``` main.py``` 
+--- 
 
 ## Regression Models
 
@@ -134,11 +137,18 @@ Always run:
 
 --- 
 
-#	Technology Stack
 
-Python 3.10
-pandas
-numpy
-scikit-learn
-matplotlib
-seaborn
+## Technology Stack
+
+| Category | Tools |
+|--------|------|
+| Programming Language | Python 3.10 |
+| Data Processing | pandas, numpy |
+| Data Visualization | matplotlib, seaborn |
+| Machine Learning / Modeling | scikit-learn |
+| Statistical Analysis | OLS Regression, Correlation Analysis |
+| Environment | Jupyter / Python Scripts |
+| Version Control | Git & GitHub |
+
+--- 
+
