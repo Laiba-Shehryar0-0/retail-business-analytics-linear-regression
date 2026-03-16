@@ -100,6 +100,7 @@ Always run:
 
 
 #	Regression Models
+Regression Models
 Model	Predictor → Target	Equation	R²	RMSE
 M1	Advertising Cost → Sales	Sales = 5.93 × AdCost − 324.38	0.564	507.5
 M2	Sales → Profit	Profit = 0.258 × Sales − 27.44	—	295.0
@@ -119,6 +120,7 @@ Discount Level	> 28.4%	Net loss (break-even threshold)
 
 ---
 
+#	Strategy	Statistical Basis
 #	Strategy	Statistical Basis
 1	Maintain ≥ $300/month advertising	Model M1 shows 5.93× revenue return
 2	Avoid transactions below $107	Model M2 shows average loss below this level
